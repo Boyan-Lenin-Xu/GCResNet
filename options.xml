@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!-- options for CGNN -->
+<options> 
+    <Deblurring category = "Image Deblurring">
+        <mode>Train</mode>
+        <test_only>False</test_only>
+        <batch_size>9</batch_size>
+        <patch_size>240</patch_size>        
+        <epoch_num>1000</epoch_num>
+        <base_lr>0.0001</base_lr>           
+        <dataset_name>GoPro</dataset_name>  
+        <gpu>yes</gpu>
+        <dataroot>./dataset</dataroot>      
+        <optimizer>ADAM</optimizer>
+        <retrain>False</retrain>
+        <n_features>96</n_features>
+        <n_blocks>48</n_blocks>
+        <decay>200</decay>
+        <gamma>0.5</gamma>
+        <n_resblocks>6</n_resblocks>
+        <n_graph_features>32</n_graph_features>
+        <n_graph_layers>5</n_graph_layers>
+        <n_filters>128</n_filters>
+        <cpu>0</cpu>
+        <n_GPUs>1</n_GPUs>
+        <save_results>True</save_results>
+        <scheduler>LambdaLR</scheduler>
+        <resume>999</resume>
+        <pre_train>False</pre_train>
+        <test_root>./test/GoPro</test_root>
+        <adj_dir>./Adj_matrix/deblur_2_full.mat</adj_dir>
+        <n_ResGCN>5</n_ResGCN>
+    </Deblurring>
+
+
+    <Super_resopution category = "Super_resopution">
+        <patch_size>96</patch_size>
+        <scale>2</scale>
+    </Super_resopution>
+</options>
