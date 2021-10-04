@@ -4,6 +4,8 @@ PyTorch implementation of the paper "Graph Convolutional Networks in Feature Spa
 
 ## Code
 
+Clone this repository and enter the file
+
     git clone https://github.com/Boyan-Lenin-Xu/GCResNet
     cd GCResNet
 
@@ -11,6 +13,21 @@ PyTorch implementation of the paper "Graph Convolutional Networks in Feature Spa
     
     demo.sh
 
+Use the last line:
+
+    python ./src/main.py --mode deblur --save_results
+
 ## Test
 
 
+## Paper and Cite
+
+Xu B, Yin H. Graph Convolutional Networks in Feature Space for Image Deblurring and Super-resolution[C]//International Joint Conference on Neural Networks 2021. IEEE, 2021.
+
+    @inproceedings{xu2021graph,
+      title={Graph Convolutional Networks in Feature Space for Image Deblurring and Super-resolution},
+      author={Xu, Boyan and Yin, Hujun},
+      booktitle={International Joint Conference on Neural Networks 2021},
+      year={2021},
+      organization={IEEE}
+    }
