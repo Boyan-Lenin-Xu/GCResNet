@@ -1,7 +1,24 @@
 # GCResNet
 PyTorch implementation of the paper "Graph Convolutional Networks in Feature Space for Image Deblurring and Super-resolution", IJCNN 2021.
 
+Boyan Xu, Hujun Yin
+
 This file will be made clearer in the next few days.
+
+## Overview
+
+Graph convolutional networks (GCNs) have achieved great success in dealing with data of non-Euclidean structures. Their success directly attributes to  fitting graph structures effectively to data such as in social media and knowledge databases. For image processing applications, the use of graph structures and GCNs have not been fully explored. In this paper, we propose a novel encoder-decoder network with added graph convolutions by converting feature maps to vertexes of a pre-generated graph to synthetically construct graph-structured data. By doing this, we inexplicitly apply graph Laplacian regularization to the feature maps, making them more structured. The experiments show that it significantly boosts performance for image restoration tasks, including deblurring and super-resolution. We believe it opens up opportunities for GCN-based approaches in more applications. 
+
+
+## Datasets
+
+GoPro
+HIDE
+DIV2K
+Set5
+Set14
+BSD100
+Urban100
 
 
 ## Code
