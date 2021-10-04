@@ -17,8 +17,20 @@ Use the last line:
 
     python ./src/main.py --mode deblur --save_results
 
-## Test
 
+## How to train GCEDSR (Super-resolution)
+
+    demo.sh
+
+Use:
+
+    python ./src/main.py --mode super-resolution --model GCSR --scale 2 --save gcsr_x2 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --save_results
+
+## Test image deblurring
+
+    ./options.xml
+
+Set <mode> to Test, set <test_only> to True
 
 ## Paper and Cite
 
