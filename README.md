@@ -1,9 +1,7 @@
 # GCResNet
-PyTorch implementation of the paper "Graph Convolutional Networks in Feature Space for Image Deblurring and Super-resolution", IJCNN 2021.
+PyTorch implementation of the paper [Graph Convolutional Networks in Feature Space for Image Deblurring and Super-resolution](http://arxiv.org/pdf/2105.10465.pdf), IJCNN 2021.
 
 Boyan Xu, Hujun Yin
-
-This file will be made clearer in the next few days.
 
 ## Overview
 
@@ -13,7 +11,6 @@ Graph convolutional networks (GCNs) have achieved great success in dealing with 
 ## Datasets
 
 GoPro
-HIDE
 DIV2K
 Set5
 Set14
@@ -28,28 +25,41 @@ Clone this repository and enter the file
     git clone https://github.com/Boyan-Lenin-Xu/GCResNet
     cd GCResNet
 
+Datasets should be put in ./dataset/
+
 ## How to train GCResNet (Deblurring)
+
+Most of the options for image deblurring are in options.xml. You can modify options.xml to change the settings.
+Use ./demo.sh to select the mode. Then use the following code to train GCResNet.
     
     demo.sh
 
-Use the last line:
+Or use:
 
     python ./src/main.py --mode deblur --save_results
 
 
 ## How to train GCEDSR (Super-resolution)
 
+Most of the options for image super-resolution are in ./src/option.py. You can modify ./src/option.py to change the settings. Then use the following code to train GCEDSR.
+
     demo.sh
 
-Use:
+Or use:
 
-    python ./src/main.py --mode super-resolution --model GCSR --scale 2 --save gcsr_x2 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --save_results
+    python ./src/main.py --mode super-resolution --model GCSR --save_results
 
-## Test image deblurring
+You can also use the code to train EDSR.
+
+## Test
+
+To test image deblurring, use ./options.xml to set the options.
 
     ./options.xml
 
     Set <mode> to Test, set <test_only> to True
+
+To test image super-resolution, use demo.sh or src/option.py to set --test_only.
 
 ## Paper and Cite
 
